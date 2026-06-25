@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000000;
+  color: #c0c0c0;
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+#screen {
+  min-height: 100%;
+  padding: 6px 8px;
+}
+
+.row { display: flex; align-items: flex-start; }
+.ps { color: #c0c0c0; padding-right: 4px; user-select: none; }
+
+textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: #ffffff;
+  caret-color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: hidden;
+}
+
+#hint { color: #555555; margin: 4px 0 8px; }
+
+#out { white-space: pre-wrap; word-wrap: break-word; }
+
+.label { color: #808080; }
+.ok { color: #6a9a6a; }
+.text { color: #e0e0e0; }
+.err { color: #b05050; }
+.busy { color: #808080; }
+
+.copy {
+  color: #707070;
+  cursor: pointer;
+  user-select: none;
+}
+.copy:hover { color: #ffffff; }
+.copy.ok { color: #cccccc; }
+
+.block { margin: 2px 0 10px; }
+
+/* settings panel */
+.panel { margin: 4px 0 10px; }
+#styleBox {
+  width: 100%;
+  margin: 4px 0 6px;
+  background: #0a0a0a;
+  border: 1px solid #333333;
+  color: #ffffff;
+  caret-color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 6px 7px;
+  outline: none;
+  resize: vertical;
+}
+#styleBox:focus { border-color: #555555; }
+.srow { display: flex; gap: 14px; align-items: center; }
+#styleMsg, #logMsg { margin-left: 4px; }
+
+.field {
+  width: 100%;
+  margin: 4px 0 6px;
+  background: #0a0a0a;
+  border: 1px solid #333333;
+  color: #ffffff;
+  caret-color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 6px 7px;
+  outline: none;
+}
+.field:focus { border-color: #555555; }
+
+/* saved-style + log lists */
+.list { margin-top: 8px; }
+.item {
+  border-top: 1px solid #1c1c1c;
+  padding: 6px 0;
+}
+.item .id { color: #555555; }
+.item .in { color: #9a9a9a; white-space: pre-wrap; word-wrap: break-word; }
+.item .ai { color: #e0e0e0; white-space: pre-wrap; word-wrap: break-word; }
+.item .acts { display: flex; gap: 12px; margin-top: 3px; }
+.empty { color: #555555; }
+
+.hidden { display: none !important; }

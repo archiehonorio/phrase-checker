@@ -1,0 +1,16 @@
+# Phrase-Check dependencies (install into the "library" venv)
+
+# Web app (Flask thin shell)
+flask>=3.0.0
+
+# AI mode — Google Gemini (free tier). Current SDK.
+google-genai>=1.0.0
+
+# Loads GEMINI_API_KEY from .env
+python-dotenv>=1.0.0
+
+# Local/offline mode — pure-Python spell checking (no Java)
+pyspellchecker>=0.8.0
+
+# Native desktop window (py desktop.py / the packaged .exe)
+pywebview>=5.0

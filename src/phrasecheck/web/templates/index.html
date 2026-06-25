@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Prompt</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div id="screen">
+    <div class="row">
+      <span class="ps">&gt;</span><textarea id="input" rows="3" spellcheck="false" autofocus></textarea>
+    </div>
+    <div id="settings" class="panel hidden">
+      <div class="label">settings — add a writing-style / example email (the AI's basis):</div>
+      <textarea id="styleBox" rows="6" spellcheck="false"
+        placeholder="paste one example email/format here, then press [save]. add as many as you like…"></textarea>
+      <div class="srow">
+        <span class="copy" id="styleSave">[save]</span>
+        <span class="copy" id="styleClearAll">[clear all]</span>
+        <span class="copy" id="styleClose">[close]</span>
+        <span id="styleMsg" class="ok"></span>
+      </div>
+      <div id="styleList" class="list"></div>
+    </div>
+
+    <div id="log" class="panel hidden">
+      <div class="label">log — your history (input + ai output):</div>
+      <input id="logSearch" class="field" placeholder="search…" />
+      <div class="srow">
+        <span class="copy" id="logClearAll">[clear all]</span>
+        <span class="copy" id="logClose">[close]</span>
+        <span id="logMsg" class="ok"></span>
+      </div>
+      <div id="logList" class="list"></div>
+    </div>
+
+    <div id="out"></div>
+  </div>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
